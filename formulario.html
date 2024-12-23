@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            color: brown;
+        }
+        label{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+        body{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario de información</h1>
+    <form action="formulario.php" method="post">
+        <fieldset>
+            <legend>Sus Datos</legend>
+            <p>
+                <label for="nombre">Nombre y apellidos:</label>
+                <input type="text" id="nombre" maxlength="50">
+            </p>
+            <p>
+                <label for="passw">Contraseña:</label>
+                <input type="password" id="passw" maxlength="8">
+            </p>
+            <p>
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" disabled placeholder="anónimo">
+            </p>
+            <p>
+                Nivel:
+            </p>
+            <p>
+                <input type="radio" name="nivel" id="profesional" value="profesional">
+                <label for="profesional">Profesional</label>
+            </p>
+            <p>
+                <input type="radio" name="nivel" id="avanzado" value="avanzado" checked>
+                <label for="avanzado">Avanzado</label>
+            </p>
+            <p>
+                <input type="radio" name="nivel" id="principiante" value="principiante">
+                <label for="principiante">Principiante</label>
+            </p>
+        </fieldset>
+        <p>
+            <label for="nacionalidad">Nacionalidad</label>
+            <select name="nacionalidad" id="nacionalidad">
+                <option value="españa">España</option>
+                <option value="ue">Unión Europea</option>
+                <option value="noue">Fuera de la Unión Europea</option>
+            </select>
+        </p>
+        <p>
+            <input type="checkbox" name="info" id="info" checked>
+            <label for="info">Deseo recibir información sobre novedades y ofertas.</label>
+        </p>
+        <p>
+            <input type="checkbox" name="condiciones" id="condiciones" >
+            <label for="condiciones">Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección de datos.</label>
+        </p>
+        <p>
+            <label for="foto">Adjuntar foto</label>
+            <input type="file">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar datos">
+        </p>
+    </form>    
+</body>
+</html>
